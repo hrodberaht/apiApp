@@ -8,11 +8,6 @@ router.get('/', function(req,res){
    res.json(user); 
 });
 
-router.get('/:id', function(req,res){
-
-   res.json(user[req.params.id]); 
-});
-
 router.post("/", function(req,res){
     
     var data = {
@@ -23,9 +18,19 @@ router.post("/", function(req,res){
     res.json(user); 
 });
 
-router.put("/", function(req,res){
-    var name = req.body.name;
-    res.json({method: name}); 
+router.get('/:id', function(req,res){
+
+   res.json(user[req.params.id]); 
+});
+
+
+router.put("/:id", function(req,res){
+    user[req.params.id] = {
+        name: req.body.name,
+        pass: req.body.pass
+    };
+    
+    res.json(user); 
 });
 
 router.delete("/:id", function(req,res){
