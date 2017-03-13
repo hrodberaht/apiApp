@@ -9,6 +9,7 @@ var cookieParser = require("cookie-parser");
 var api = require("./api/routes/apiRoute");
 var admin = require("./admin/routes/adminRoute");
 var client = require("./client/routes/clientRoute");
+var babylon = require("./babylon/routes/babylonRoute");
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,6 +27,7 @@ app.use('/public',express.static(path.join(__dirname, '/public')));
 app.use("/", client);
 app.use("/api", api);
 app.use("/admin", admin);
+app.use("/babylon", babylon);
 
 
 
