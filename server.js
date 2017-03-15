@@ -6,6 +6,8 @@ var morgan = require("morgan");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 
+require('./api/models/db');//mongoDB
+
 var api = require("./api/routes/apiRoute");
 var admin = require("./admin/routes/adminRoute");
 var client = require("./client/routes/clientRoute");

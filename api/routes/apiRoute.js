@@ -1,21 +1,29 @@
 var express = require("express");
 var router = express.Router();
 
-var user = [{name:"add", pass: "sam"},{name:"dwa", pass:"ddd"}];
+var User = require("../models/userSchema");
 
 router.get('/', function(req,res){
-
-   res.json(user); 
+   User.find(function (err, user) {
+      if (err) return console.error(err);
+      return res.send(user); 
+   });
+   
 });
 
 router.post("/", function(req,res){
     
-    var data = {
-        name: req.body.name,
-        pass: req.body.pass
-    };
-    user.push(data);
-    res.json(user); 
+    var addUser = new User( {
+        username: req.body.username,
+        password: req.body.password
+    });
+    
+    addUser.save(function(err, user){
+        if (err) return console.error(err);
+        return res.redirect('..');    
+    });
+   
+     
 });
 
 router.get('/:id', function(req,res){
