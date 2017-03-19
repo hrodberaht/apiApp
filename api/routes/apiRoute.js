@@ -20,7 +20,7 @@ router.post("/", function(req,res){
     
     addUser.save(function(err, user){
         if (err) return console.error(err);
-        return res.redirect('..');    
+        return res.send(user);    
     });
    
      

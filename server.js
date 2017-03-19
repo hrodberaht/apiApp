@@ -31,6 +31,10 @@ app.use("/api", api);
 app.use("/admin", admin);
 app.use("/babylon", babylon);
 
+//page not found
+app.use("*", function(req,res){
+   res.status(404).send("Page not found"); 
+});
 
 
 app.listen(port, function(){
