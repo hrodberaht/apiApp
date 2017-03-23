@@ -3,9 +3,9 @@ var router = express.Router();
 var path = require("path");
 
 
-router.get("/", function(req,res){
+router.get("/home*", function(req,res){
     
-    res.sendFile(path.join(__dirname , '..','angular.html'));
-})
+    res.sendFile(path.join(__dirname , '../../public/js/angular/admin.html'));
+});
 
 module.exports = router;

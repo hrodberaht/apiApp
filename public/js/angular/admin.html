@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+     <head>
+       <base href="/">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Admin</title>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
+        <link rel="stylesheet" href="../public/styles/admin.css" type="text/css" />
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <div class="cointainer">
+            <ul>
+                <a href="admin/home"><li>Home</li></a>
+                <a href="admin/home/about"><li>About</li></a>
+            </ul>
+            <div ng-view>
+                
+            </div>
+        </div>
+        <script type="text/javascript" src="../../public/js/angular/myApp.js"></script>
+        <script type="text/javascript" src="../../public/js/angular/myCtrl.js"></script>
+        <script type="text/javascript" src="../../public/js/angular/myDir.js"></script>
+        <script type="text/javascript" src="../../public/js/angular/angularRouting.js"></script>
+    </body>
+</html>

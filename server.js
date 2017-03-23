@@ -25,6 +25,7 @@ app.set('view engine', 'ejs');
 app.use('/public',express.static(path.join(__dirname, '/public')));
 
 
+
 //routes
 app.use("/", client);
 app.use("/api", api);

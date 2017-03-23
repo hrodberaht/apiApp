@@ -1,0 +1,16 @@
+<div class="angular" style="background-color:{{name}}">
+    <input type="text" ng-model="name" placeholder="Enter name" />
+</div>
+<p>Hello {{name}}</p>
+<p my-dir></p>
+<p>Products: </p>
+Filter: <input type="text" ng-model="productsFilter" name="" />
+<ul>
+    <li ng-repeat="x in products | filter: productsFilter">{{x}}</li>
+</ul>
+<button ng-click="startClock()">Start clock</button>
+<p>{{clock}}</p>
+<p>Users</p>
+<ul>
+    <li ng-repeat="user in data">{{user.username}}</li>
+</ul>
