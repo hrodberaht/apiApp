@@ -5,10 +5,10 @@ app.config(function($routeProvider,$locationProvider){
     })
     .when("/admin/home/about",{
       templateUrl: "public/js/angular/about.html",
+    })
+    .otherwise({
+        redirectTo: '/login'
     });
-    // otherwise({
-    //     redirectTo: 'admin/home'
-    // });
     
     $locationProvider.html5Mode(true);
 });

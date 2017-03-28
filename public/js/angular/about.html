@@ -12,5 +12,10 @@ Filter: <input type="text" ng-model="productsFilter" name="" />
 <p>{{clock}}</p>
 <p>Users</p>
 <ul>
-    <li ng-repeat="user in data">{{user.username}}</li>
+    <li ng-repeat="user in data">{{user.username}} and {{user.password}}</li>
 </ul>
+<form>
+    Username: <input type="text"  ng-model="username"/>
+    Password: <input type="text"  ng-model="password"/>
+    <input ng-click="submit(username,password)" type="submit" value="Submit"/>
+</form>
