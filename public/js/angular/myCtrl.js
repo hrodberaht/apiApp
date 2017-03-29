@@ -22,23 +22,22 @@ app.controller('myCtrl', function($scope, $interval, $http){
         $scope.data = response.statusText;
     })}, 2000);
     
-    var clear=function(){
-        $scope.username="";
-    };
-    
     
     $scope.submit = function(username,password){
-    $http({
-        method: "POST",
-        url: "/api",
-        data:{"username":username,"password":password}
-    }).then(function mySucces(response){
-        clear();
-    }, function myError(response){
-        $scope.data = response.statusText;
-    });
+        
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+       
+        $http({
+            method: "POST",
+            url: "/api",
+            data:{"username":username,"password":password}
+        }).then(function mySucces(response){
+        }, function myError(response){
+            $scope.data = response.statusText;
+        });
+   
     };
-    
     
    
 });

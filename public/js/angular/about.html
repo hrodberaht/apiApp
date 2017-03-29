@@ -14,8 +14,8 @@ Filter: <input type="text" ng-model="productsFilter" name="" />
 <ul>
     <li ng-repeat="user in data">{{user.username}} and {{user.password}}</li>
 </ul>
-<form>
-    Username: <input type="text"  ng-model="username"/>
-    Password: <input type="text"  ng-model="password"/>
-    <input ng-click="submit(username,password)" type="submit" value="Submit"/>
+<form ng-submit="submit(username,password)">
+    Username: <input type="text" id="username" ng-model="username" required/>
+    Password: <input type="text" id="password" ng-model="password" required/>
+    <input  type="submit" value="Add"/>
 </form>
