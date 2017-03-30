@@ -1,5 +1,5 @@
 body{
-    margin: 0px;
+    margin: 45px 0px 0px 0px;
     padding-top: 0px;
 }
 
@@ -48,21 +48,17 @@ li a:hover {
 /*header*/
 
 header {
+    margin-top:  200px;
     max-width: 1200px;
     margin: auto;
-    border: 1px solid black;
     height: 400px;
-    margin-top: 50px;
+    background: url("../../public/img/programing.jpg") no-repeat; 
 }
 
-h1 {
-    text-align: center;
-    margin-top: 180px;
-}
 /*end heder*/
 
 
-/*section*/
+/*sections*/
 
 section {
     max-width: 1200px;
@@ -70,7 +66,7 @@ section {
 }
 
 .sub {
-    border: 1px solid black;
+    
     margin-top: 5px;
 }
 
@@ -82,18 +78,29 @@ section {
 
 .cards {
     margin-top: 5px;    
-    border: 1px solid black;
+    
 }
 
 .card {
-    border: 1px solid black;
+    
     width: 397px;
     height: 400px;
     float: left;
 }
 
-
-.foto1{
-    clear: both;
+.card img{
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
-/*end section*/
+
+/*end sections*/
+
+/*footer*/
+footer {
+    clear: both;
+    height: 200px;
+    background-color: black;
+}
+/*end footer*/
