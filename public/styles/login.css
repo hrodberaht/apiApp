@@ -11,6 +11,7 @@ div{
     width: 400px;
     margin: auto;
     background-color: #1aa3ff;
+    border-radius: 10px;
 }
 input{
     margin-bottom: 5px;
@@ -19,8 +20,12 @@ input{
 }
 
 form button {
+    margin-top: 15px;
+    border-radius: 20px;
+    border-color: #ffa31a;
     height: 3em;
-    width: 6em;
+    width: 8em;
     font-size: 0.8em;
+    background-color: #ffa31a;
 }
 
