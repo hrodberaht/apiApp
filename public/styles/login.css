@@ -17,6 +17,9 @@ input{
     margin-bottom: 5px;
     height: 2em;
     width: 20em;
+    border-radius: 10px;
+    border-color: #1aa3ff; 
+    text-indent: 5px;
 }
 
 form button {
