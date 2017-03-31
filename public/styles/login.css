@@ -1,0 +1,26 @@
+
+body {
+    margin-top: 10%;
+    text-align: center;
+    
+}
+
+div{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 400px;
+    margin: auto;
+    background-color: #1aa3ff;
+}
+input{
+    margin-bottom: 5px;
+    height: 2em;
+    width: 20em;
+}
+
+form button {
+    height: 3em;
+    width: 6em;
+    font-size: 0.8em;
+}
+
